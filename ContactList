@@ -1,0 +1,34 @@
+var friends = new Object();
+
+friends.bill = {
+    "firstName": "Bill",
+    "lastName": "Gate",
+    "number": "01234",
+    "address": ["123", "dolores street", "SF", "CA", "94103"]
+};
+friends.steve = {
+    "firstName": "Steve",
+    "lastName": "Jobs",
+    "number": "02222",
+    "address": ["680", "sacramento street", "SF", "CA", "94111"]
+};
+
+var list = function (friend) {
+    for (var key in friend){
+        console.log(key);
+    }
+};
+
+var search = function (name) {
+    for (var key in friends){
+        if (name === friends[key].firstName){
+            console.log("First name: "
+            +friends[key]["firstName"]+"\nLast Name: "+friends[key]["lastName"]+
+            "\nNumber: "+friends[key]["number"]+
+            "\nAddress: "+friends[key]["address"]);
+            //return friends[key];
+        }
+    }
+};
+
+search("Steve");
